@@ -704,7 +704,7 @@ section, .container {
   @apply bg-lv-black py-16 lg:py-12 4xl:py-20;
 
   .closing-content {
-    @apply max-w-140 text-center;
+    @apply max-w-154 text-center;
     
     h3 {
       @apply font-gowun font-bold text-lv-white mb-8; 

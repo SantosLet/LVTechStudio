@@ -58,7 +58,9 @@ export default function Closing() {
           >
             fazemos repetidamente
           </motion.span>
-          . A excelência, portanto, não é um ato, mas um hábito." - Will Durant
+          . A excelência, portanto, não é um ato, mas um hábito." 
+          <br />
+          - Will Durant
         </motion.h3>
 
         <motion.p
