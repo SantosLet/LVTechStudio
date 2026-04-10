@@ -89,7 +89,7 @@ export default function Contact() {
               </Button>
 
               <Button
-                href="/documents/leticia_videira_cv.pdf"
+                href="/documents/curriculo_leticia_videira.pdf"
                 variant="secondary"
                 download
               >

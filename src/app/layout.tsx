@@ -23,7 +23,10 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "LV Tech Studio",
-  description: "Portifólio Profissional da Letícia Gabrielle Videira dos Santos",
+  description: "Portfólio Profissional da Letícia Gabrielle Videira dos Santos",
+  icons: {
+  icon: "/icons/lvtech_logo_orange.svg",
+}
 };
 
 export default function RootLayout({
