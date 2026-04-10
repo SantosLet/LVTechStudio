@@ -1,4 +1,4 @@
-import Hero from "@/app/sections/Hero"
+import Hero from "@/app/sections/Hero";
 import AboutMe from "@/app/sections/AboutMe";
 import Testimonials from "./sections/Testimonials";
 import Closing from "./sections/Closing";
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero/>
       <AboutMe/>
       <Services/>
-      <Projects/> 
+      <Projects/>
       <SoftSkills/>
       <Testimonials/>
       <Closing/>

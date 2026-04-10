@@ -34,8 +34,9 @@ export default function LSidebar({ open, onClose }: MobileMenuProps) {
     }
 
     return () => {
-      if (openTimer) clearTimeout(openTimer);
-      if (closeTimer) clearTimeout(closeTimer);
+      if (openTimer) {clearTimeout(openTimer);}
+
+      if (closeTimer) {clearTimeout(closeTimer);}
     };
   }, [open]);
 
@@ -48,7 +49,7 @@ export default function LSidebar({ open, onClose }: MobileMenuProps) {
       .map((id) => document.querySelector(id))
       .filter(Boolean) as HTMLElement[];
 
-    if (!sections.length) return;
+    if (!sections.length) {return;}
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -57,6 +58,7 @@ export default function LSidebar({ open, onClose }: MobileMenuProps) {
           .sort((a, b) => {
             const aTop = Math.abs(a.boundingClientRect.top);
             const bTop = Math.abs(b.boundingClientRect.top);
+
             return aTop - bTop;
           });
 
@@ -68,7 +70,7 @@ export default function LSidebar({ open, onClose }: MobileMenuProps) {
         root: null,
         rootMargin: "0px 0px -45% 0px",
         threshold: 0.1,
-      }
+      },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -76,7 +78,7 @@ export default function LSidebar({ open, onClose }: MobileMenuProps) {
     return () => observer.disconnect();
   }, []);
 
-  if (!rendered) return null;
+  if (!rendered) {return null;}
 
   return (
     <>

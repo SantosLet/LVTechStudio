@@ -7,7 +7,7 @@ function useRevealRange(
   progress: ReturnType<typeof useScroll>["scrollYProgress"],
   start: number,
   end: number,
-  fromY = 18
+  fromY = 18,
 ) {
   const opacity = useTransform(progress, [start, end], [0, 1]);
   const y = useTransform(progress, [start, end], [fromY, 0]);

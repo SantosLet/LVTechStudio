@@ -95,7 +95,7 @@ function useRevealRange(
   start: number,
   end: number,
   fromY = 18,
-  fromScale = 0.992
+  fromScale = 0.992,
 ) {
   const opacity = useTransform(progress, [start, end], [0, 1]);
   const y = useTransform(progress, [start, end], [fromY, 0]);
@@ -112,7 +112,7 @@ export default function Projects() {
   const total = projects.length;
   const activeProject = useMemo(
     () => projects[activeIndex - 1] ?? projects[0],
-    [activeIndex]
+    [activeIndex],
   );
 
   const format = (n: number) => String(n).padStart(2, "0");

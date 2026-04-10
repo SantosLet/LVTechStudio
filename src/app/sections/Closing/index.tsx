@@ -7,7 +7,7 @@ function useSmoothReveal(
   progress: ReturnType<typeof useScroll>["scrollYProgress"],
   start: number,
   end: number,
-  fromY = 12
+  fromY = 12,
 ) {
   const rawOpacity = useTransform(progress, [start, end], [0, 1]);
   const rawY = useTransform(progress, [start, end], [fromY, 0]);
@@ -58,7 +58,7 @@ export default function Closing() {
           >
             fazemos repetidamente
           </motion.span>
-          . A excelência, portanto, não é um ato, mas um hábito." 
+          . A excelência, portanto, não é um ato, mas um hábito."
           <br />
           - Will Durant
         </motion.h3>

@@ -78,7 +78,7 @@ function useRevealRange(
   start: number,
   end: number,
   fromY = 24,
-  fromScale = 0.985
+  fromScale = 0.985,
 ) {
   const opacity = useTransform(progress, [start, end], [0, 1]);
   const y = useTransform(progress, [start, end], [fromY, 0]);

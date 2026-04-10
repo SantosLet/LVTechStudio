@@ -39,7 +39,7 @@ export default function LNavbar({ onOpen }: LNavbarProps) {
       .map((id) => document.querySelector(id))
       .filter(Boolean) as Element[];
 
-    if (!sections.length) return;
+    if (!sections.length) {return;}
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -55,7 +55,7 @@ export default function LNavbar({ onOpen }: LNavbarProps) {
         root: null,
         rootMargin: "-20% 0px -55% 0px",
         threshold: [0.2, 0.35, 0.5, 0.65],
-      }
+      },
     );
 
     sections.forEach((section) => observer.observe(section));

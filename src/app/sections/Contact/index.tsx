@@ -9,7 +9,7 @@ function useReveal(
   progress: ReturnType<typeof useScroll>["scrollYProgress"],
   start: number,
   end: number,
-  fromY = 16
+  fromY = 16,
 ) {
   const opacity = useTransform(progress, [start, end], [0, 1]);
   const y = useTransform(progress, [start, end], [fromY, 0]);
@@ -115,7 +115,7 @@ export default function Contact() {
 
           <motion.div
             style={{
-              opacity: image.opacity
+              opacity: image.opacity,
             }}
           >
             <Image

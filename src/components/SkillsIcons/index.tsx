@@ -17,7 +17,7 @@ const icons = [
   { name: "C#", icon: "devicon-csharp-plain" },
   { name: ".NET", icon: "devicon-dotnetcore-plain" },
   { name: "PHP", icon: "devicon-php-plain" },
-  { name: "Laravel", icon: "devicon-laravel-plain" }
+  { name: "Laravel", icon: "devicon-laravel-plain" },
 ];
 
 export default function SkillsIcons() {

@@ -40,7 +40,7 @@ function useRevealRange(
   start: number,
   end: number,
   fromY = 24,
-  fromScale = 0.988
+  fromScale = 0.988,
 ) {
   const opacity = useTransform(progress, [start, end], [0, 1]);
   const y = useTransform(progress, [start, end], [fromY, 0]);
@@ -52,7 +52,7 @@ function useRevealRange(
 function useTimelineMarkerRange(
   progress: ReturnType<typeof useScroll>["scrollYProgress"],
   start: number,
-  end: number
+  end: number,
 ) {
   const opacity = useTransform(progress, [start, end], [0, 1]);
   const scale = useTransform(progress, [start, end], [0.6, 1]);
