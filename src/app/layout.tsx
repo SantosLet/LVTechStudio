@@ -38,17 +38,14 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scrollflow@1.3.0/dist/style.min.css"></link>
       </head>
-      
+
       <body className={`${dmSans.variable} ${gowun.variable} ${spaceGrotesk.variable}`}>
         <Header/>
 
         <main>{children}</main>
 
         <Footer/>
-
-        <script src="https://cdn.jsdelivr.net/npm/scrollflow@1.3.0/dist/scrollflow.umd.min.js"></script>
       </body>
     </html>
   );

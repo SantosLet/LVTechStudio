@@ -147,7 +147,7 @@ section, .container {
     @apply hidden md:flex flex-col md:flex-row md:items-center gap-x-6 xl:gap-x-8 4xl:gap-x-10 gap-y-6;
 
     li, a {
-      @apply font-dmsans font-normal text-lv-gray duration-200 p-0.5 cursor-pointer;
+      @apply font-dmsans font-normal duration-200 p-0.5 cursor-pointer;
     }
   }
 
@@ -158,6 +158,10 @@ section, .container {
       @apply cursor-pointer;
     }
   }
+}
+
+.scroll-progress {
+  @apply fixed top-12 4xl:top-14 left-0 right-0 h-1 bg-lv-main origin-left z-50;
 }
 
 .lvtech-sidebar-overlay {
@@ -547,7 +551,7 @@ section, .container {
   }
 
   .projects-content {
-    @apply overflow-x-hidden;
+    @apply overflow-hidden;
 
     .projects-top-pagination {
       @apply flex items-center justify-end gap-4 pt-8 lg:pt-0;
@@ -570,18 +574,19 @@ section, .container {
       .projet-mockup {
         @apply relative w-full overflow-hidden;
         aspect-ratio: 16 / 9;
+        transform-origin: center top;
+        will-change: transform, opacity, filter;
       }
 
       .about-project {
-        @apply lg:max-w-xl text-justify flex flex-col items-start gap-3 3xl:gap-5 mx-auto pt-10 lg:pt-0;
-
+        @apply relative lg:max-w-xl text-justify flex flex-col items-start gap-3 3xl:gap-5 mx-auto pt-10 lg:pt-0;
         min-width: 0;
 
         .project-techs {
-          @apply font-spacegrot flex flex-wrap gap-3;
+          @apply font-spacegrot flex flex-wrap gap-3 lg:gap-2 4xl:gap-3;
 
           span {
-            @apply text-xs 4xl:text-xsm text-lv-white/80 border border-lv-white/40 px-4 py-0.5;
+            @apply text-xsm lg:text-xs xl:text-xsm 4xl:text-sm text-lv-white/80 border border-lv-white/40 px-4 lg:px-2.5 4xl:px-4 py-0.5;
           }
         }
 
@@ -595,7 +600,7 @@ section, .container {
       }
 
       .redirect-project-button {
-        @apply flex items-center gap-2 pt-4 4xl:pt-6;
+        @apply flex items-center gap-2 pt-6 4xl:pt-8;
 
         p {
           @apply font-spacegrot text-lv-main hover:text-lv-main/70 uppercase duration-200;
@@ -716,7 +721,6 @@ section, .container {
 
   .cat-contact-me {
     @apply absolute z-10 top-6 sm:top-auto -right-6 sm:-right-14 xl:-right-15 4xl:-right-18 h-13 sm:h-30 xl:h-32 4xl:h-40 w-auto -rotate-90 mt-8;
-
   }
   
   .medias-container {

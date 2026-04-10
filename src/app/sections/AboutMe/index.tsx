@@ -1,100 +1,248 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import SkillsIcons from "@/components/SkillsIcons";
 
+const timeline = [
+  {
+    date: "Fev 2026",
+    text: "Início da atuação profissional como desenvolvedora freelancer",
+  },
+  {
+    date: "Jul 2025 - Jan 2026",
+    text: "Revelare - Desenvolvedora Front-end Júnior",
+  },
+  {
+    date: "Dez 2025",
+    text: "Conclusão do bacharelado em Ciência da Computação",
+  },
+  {
+    date: "Jul 2023 - Mai 2025",
+    text: "Moovefy - Desenvolvedora Web Front-end Júnior",
+  },
+  {
+    date: "Mai 2022 - Jun 2023",
+    text: "Moovefy - Estágio em Desenvolvimento Web",
+  },
+  {
+    date: "Mar 2022",
+    text: "Início do bacharelado em Ciência da Computação",
+  },
+  {
+    date: "Ago 2020 - Dez 2021",
+    text: "Formação técnica em Desenvolvimento de Sistemas",
+  },
+];
+
+function useRevealRange(
+  progress: ReturnType<typeof useScroll>["scrollYProgress"],
+  start: number,
+  end: number,
+  fromY = 24,
+  fromScale = 0.988
+) {
+  const opacity = useTransform(progress, [start, end], [0, 1]);
+  const y = useTransform(progress, [start, end], [fromY, 0]);
+  const scale = useTransform(progress, [start, end], [fromScale, 1]);
+
+  return { opacity, y, scale };
+}
+
+function useTimelineMarkerRange(
+  progress: ReturnType<typeof useScroll>["scrollYProgress"],
+  start: number,
+  end: number
+) {
+  const opacity = useTransform(progress, [start, end], [0, 1]);
+  const scale = useTransform(progress, [start, end], [0.6, 1]);
+
+  return { opacity, scale };
+}
+
 export default function AboutMe() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 92%", "end 72%"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 90,
+    damping: 22,
+    mass: 0.35,
+  });
+
+  const legend = useRevealRange(smoothProgress, 0.00, 0.08, 14, 0.995);
+  const title = useRevealRange(smoothProgress, 0.03, 0.12, 18, 0.992);
+
+  const paragraph1 = useRevealRange(smoothProgress, 0.10, 0.20, 18, 0.992);
+  const paragraph2 = useRevealRange(smoothProgress, 0.16, 0.27, 18, 0.992);
+  const paragraph3 = useRevealRange(smoothProgress, 0.22, 0.34, 18, 0.992);
+
+  const skills = useRevealRange(smoothProgress, 0.30, 0.42, 20, 0.99);
+
+  const timeline1 = useRevealRange(smoothProgress, 0.40, 0.48, 22, 0.988);
+  const timeline2 = useRevealRange(smoothProgress, 0.45, 0.53, 22, 0.988);
+  const timeline3 = useRevealRange(smoothProgress, 0.50, 0.58, 22, 0.988);
+  const timeline4 = useRevealRange(smoothProgress, 0.55, 0.63, 22, 0.988);
+  const timeline5 = useRevealRange(smoothProgress, 0.60, 0.68, 22, 0.988);
+  const timeline6 = useRevealRange(smoothProgress, 0.65, 0.73, 22, 0.988);
+  const timeline7 = useRevealRange(smoothProgress, 0.70, 0.78, 22, 0.988);
+
+  const marker1 = useTimelineMarkerRange(smoothProgress, 0.42, 0.47);
+  const marker2 = useTimelineMarkerRange(smoothProgress, 0.47, 0.52);
+  const marker3 = useTimelineMarkerRange(smoothProgress, 0.52, 0.57);
+  const marker4 = useTimelineMarkerRange(smoothProgress, 0.57, 0.62);
+  const marker5 = useTimelineMarkerRange(smoothProgress, 0.62, 0.67);
+  const marker6 = useTimelineMarkerRange(smoothProgress, 0.67, 0.72);
+  const marker7 = useTimelineMarkerRange(smoothProgress, 0.72, 0.77);
+
+  const timelineStyles = [
+    timeline1,
+    timeline2,
+    timeline3,
+    timeline4,
+    timeline5,
+    timeline6,
+    timeline7,
+  ];
+
+  const markerStyles = [
+    marker1,
+    marker2,
+    marker3,
+    marker4,
+    marker5,
+    marker6,
+    marker7,
+  ];
+
   return (
-    <section id="sobre" className="section-about-me">
+    <section id="sobre" ref={sectionRef} className="section-about-me">
       <div className="container">
         <div className="pr-0 lg:pr-12">
-          <div className="title-section-container">
-            <p className="section-top-legend"> Sobre mim </p>
-            <h2 className="section-title text-lv-white"> Resumo profissional </h2>
-          </div>
+          <motion.div
+            className="title-section-container"
+            style={{
+              opacity: legend.opacity,
+              y: legend.y,
+              scale: legend.scale,
+            }}
+          >
+            <p className="section-top-legend">Sobre mim</p>
 
-          <div className="summary-experience-container">          
+            <motion.h2
+              className="section-title text-lv-white"
+              style={{
+                opacity: title.opacity,
+                y: title.y,
+                scale: title.scale,
+              }}
+            >
+              Resumo profissional
+            </motion.h2>
+          </motion.div>
+
+          <div className="summary-experience-container">
             <div className="summary-about-me">
-              <p>
-                Sou <strong>Desenvolvedora Front-end</strong> focada em <strong>aplicações web</strong>, criando interfaces <strong>modernas, responsivas e bem estruturadas</strong>. 
-                Desde 2022, atuo em projetos organizados em <strong>sprints</strong>, com foco em <strong>entregas contínuas</strong> e evolução constante das soluções.
-              </p>
+              <motion.p
+                style={{
+                  opacity: paragraph1.opacity,
+                  y: paragraph1.y,
+                  scale: paragraph1.scale,
+                }}
+              >
+                Sou <strong>Desenvolvedora Front-end</strong> focada em{" "}
+                <strong>aplicações web</strong>, criando interfaces{" "}
+                <strong>modernas, responsivas e bem estruturadas</strong>.
+                Desde 2022, atuo em projetos organizados em <strong>sprints</strong>,
+                com foco em <strong>entregas contínuas</strong> e evolução constante
+                das soluções.
+              </motion.p>
 
-              <p>
-                Trabalho na transformação de protótipos em aplicações reais, mantendo fidelidade ao <strong>design</strong> e atenção à <strong>performance</strong>, <strong>SEO</strong> e <strong>experiência do usuário</strong>. 
-                Minha atuação é centrada em <strong>Vue e TypeScript</strong>, além do desenvolvimento com <strong>React e Next.js</strong>, sempre aplicando boas práticas de <strong>organização</strong> e <strong>integração com APIs</strong>.
-              </p>
+              <motion.p
+                style={{
+                  opacity: paragraph2.opacity,
+                  y: paragraph2.y,
+                  scale: paragraph2.scale,
+                }}
+              >
+                Trabalho na transformação de protótipos em aplicações reais,
+                mantendo fidelidade ao <strong>design</strong> e atenção à{" "}
+                <strong>performance</strong>, <strong>SEO</strong> e{" "}
+                <strong>experiência do usuário</strong>. Minha atuação é centrada em{" "}
+                <strong>Vue e TypeScript</strong>, além do desenvolvimento com{" "}
+                <strong>React e Next.js</strong>, sempre aplicando boas práticas de{" "}
+                <strong>organização</strong> e <strong>integração com APIs</strong>.
+              </motion.p>
 
-              <p>
-                Ao longo dessa experiência, desenvolvi também uma base em back-end, o que me permite compreender melhor a estrutura das aplicações e contribuir com integrações mais eficientes. 
-                Busco construir interfaces que equilibram <strong>estética, usabilidade e eficiência</strong>, enquanto sigo evoluindo em <strong>UI Design</strong> e <strong>desenvolvimento mobile</strong>.
-              </p>
+              <motion.p
+                style={{
+                  opacity: paragraph3.opacity,
+                  y: paragraph3.y,
+                  scale: paragraph3.scale,
+                }}
+              >
+                Ao longo dessa experiência, desenvolvi também uma base em back-end,
+                o que me permite compreender melhor a estrutura das aplicações e
+                contribuir com integrações mais eficientes. Busco construir interfaces
+                que equilibram <strong>estética, usabilidade e eficiência</strong>,
+                enquanto sigo evoluindo em <strong>UI Design</strong> e{" "}
+                <strong>desenvolvimento mobile</strong>.
+              </motion.p>
             </div>
           </div>
 
-          <SkillsIcons/>
+          <motion.div
+            style={{
+              opacity: skills.opacity,
+              y: skills.y,
+              scale: skills.scale,
+            }}
+          >
+            <SkillsIcons />
+          </motion.div>
         </div>
 
         <div className="experience-training">
           <div className="experience">
             <div className="experience-training-content container-fluid">
               <div className="row example-centered">
-                  <div>
-                      <ul className="timeline timeline-centered">
-                          <li className="timeline-item">
-                            <div className="timeline-info">
-                              <span> Fev 2026 </span>
-                            </div>
-                            <div className="timeline-marker"></div>
-                            <div className="timeline-content"><p> Início da atuação profissional como desenvolvedora freelancer </p></div>
-                          </li>
+                <div>
+                  <ul className="timeline timeline-centered">
+                    {timeline.map((item, index) => (
+                      <motion.li
+                        key={item.date}
+                        className={`timeline-item ${
+                          index === timeline.length - 1 ? "pb-0!" : ""
+                        }`}
+                        style={{
+                          opacity: timelineStyles[index].opacity,
+                          y: timelineStyles[index].y,
+                          scale: timelineStyles[index].scale,
+                        }}
+                      >
+                        <div className="timeline-info">
+                          <span>{item.date}</span>
+                        </div>
 
-                          <li className="timeline-item">
-                            <div className="timeline-info">
-                              <span> Jul 2025 - Jan 2026 </span>
-                            </div>
-                            <div className="timeline-marker"></div>
-                            <div className="timeline-content"><p> Revelare - Desenvolvedora Front-end Júnior </p></div>
-                          </li>
+                        <motion.div
+                          className="timeline-marker"
+                          style={{
+                            opacity: markerStyles[index].opacity,
+                            scale: markerStyles[index].scale,
+                          }}
+                        />
 
-                          <li className="timeline-item">
-                            <div className="timeline-info">
-                              <span> Dez 2025 </span>
-                            </div>
-                            <div className="timeline-marker"></div>
-                            <div className="timeline-content"><p> Conclusão do bacharelado em Ciência da Computação </p></div>
-                          </li>
-
-                          <li className="timeline-item">
-                            <div className="timeline-info">
-                              <span> Jul 2023 - Mai 2025 </span>
-                            </div>
-                            <div className="timeline-marker"></div>
-                            <div className="timeline-content"><p> Moovefy - Desenvolvedora Web Front-end Júnior </p></div>
-                          </li>
-
-                          <li className="timeline-item">
-                            <div className="timeline-info">
-                              <span> Mai 2022 - Jun 2023 </span>
-                            </div>
-                            <div className="timeline-marker"></div>
-                            <div className="timeline-content"><p> Moovefy - Estágio em Desenvolvimento Web </p></div>
-                          </li>
-
-                          <li className="timeline-item">
-                            <div className="timeline-info">
-                              <span> Mar 2022 </span>
-                            </div>
-                            <div className="timeline-marker"></div>
-                            <div className="timeline-content"><p> Início do bacharelado em Ciência da Computação </p></div>
-                          </li>
-
-                          <li className="timeline-item pb-0!">
-                            <div className="timeline-info">
-                              <span> Ago 2020 - Dez 2021 </span>
-                            </div>
-                            <div className="timeline-marker"></div>
-                            <div className="timeline-content"><p> Formação técnica em Desenvolvimento de Sistemas </p></div>
-                          </li>
-                      </ul>
-                  </div>
+                        <div className="timeline-content">
+                          <p>{item.text}</p>
+                        </div>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
