@@ -29,7 +29,13 @@ const testimonials = [
     message:
       "Trabalhar com a Letícia é extremamente satisfatório, ela demonstra alto nível de dedicação, atenção minuciosa aos detalhes, grande empenho e notável capacidade de absorção e assimilação rápida de conteúdos.",
     name: "Rafaela J. Estabile",
-    position: "Desenvolvedora Full-Stack",
+    position: "Desenvolvedora Full Stack",
+  },
+  {
+    message:
+      "Gostei muito de trabalhar com a Letícia. Ela se destaca pela excelente comunicação e pela criatividade na construção de interfaces modernas e responsivas, sempre entregando um front-end de alta qualidade e alinhado às melhores práticas.",
+    name: "Matheus P. Baptista",
+    position: "Engenheiro e Arquiteto de Software",
   },
   {
     message:
