@@ -6,7 +6,7 @@ import SkillsIcons from "@/components/SkillsIcons";
 
 const timeline = [
   {
-    date: "Fev 2026",
+    date: "Fev 2026 - Presente",
     text: "Início da atuação profissional como desenvolvedora freelancer",
   },
   {

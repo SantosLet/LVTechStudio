@@ -27,6 +27,12 @@ const testimonials = [
   },
   {
     message:
+      "A Lê é uma colega de front-end organizada, objetiva e focada, com atenção aos detalhes visuais e contextuais. Aberta a feedbacks, demonstra grande potencial de desenvolvimento pessoal e profissional.",
+    name: "Caio M. Ramos",
+    position: "Desenvolvedor Front-end Pleno",
+  },
+  {
+    message:
       "Trabalhar com a Letícia é extremamente satisfatório, ela demonstra alto nível de dedicação, atenção minuciosa aos detalhes, grande empenho e notável capacidade de absorção e assimilação rápida de conteúdos.",
     name: "Rafaela J. Estabile",
     position: "Desenvolvedora Full Stack",
@@ -36,6 +42,12 @@ const testimonials = [
       "Gostei muito de trabalhar com a Letícia. Ela se destaca pela excelente comunicação e pela criatividade na construção de interfaces modernas e responsivas, sempre entregando um front-end de alta qualidade e alinhado às melhores práticas.",
     name: "Matheus P. Baptista",
     position: "Engenheiro e Arquiteto de Software",
+  },
+  {
+    message:
+      "Foi minha aluna em Ciência da Computação, destacando-se pelo esforço, dedicação e responsabilidade, além de boas habilidades técnicas, lógica de programação e trabalho em equipe.",
+    name: "Marco Aurélio Antunes",
+    position: "Docente na FIB",
   },
   {
     message:
