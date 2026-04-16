@@ -29,7 +29,7 @@ const testimonials = [
     message:
       "A Lê é uma colega de front-end organizada, objetiva e focada, com atenção aos detalhes visuais e contextuais. Aberta a feedbacks, demonstra grande potencial de desenvolvimento pessoal e profissional.",
     name: "Caio M. Ramos",
-    position: "Desenvolvedor Front-end Pleno",
+    position: "Desenvolvedor Web Pleno",
   },
   {
     message:
