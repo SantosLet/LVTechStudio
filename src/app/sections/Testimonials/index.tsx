@@ -45,6 +45,12 @@ const testimonials = [
   },
   {
     message:
+      "Letícia tem um olhar apurado para os detalhes que poucos desenvolvedores têm. Suas entregas são cuidadosas e comprometidas, sempre construindo interfaces que equilibram qualidade visual e funcionamento impecável.",
+    name: "Vitor S. Santos",
+    position: "Engenheiro e Arquiteto de Software",
+  },
+  {
+    message:
       "Foi minha aluna em Ciência da Computação, destacando-se pelo esforço, dedicação e responsabilidade, além de boas habilidades técnicas, lógica de programação e trabalho em equipe.",
     name: "Marco Aurélio Antunes",
     position: "Docente na FIB",
