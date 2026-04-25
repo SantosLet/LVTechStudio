@@ -47,7 +47,7 @@ const testimonials = [
     message:
       "Letícia tem um olhar apurado para os detalhes que poucos desenvolvedores têm. Suas entregas são cuidadosas e comprometidas, sempre construindo interfaces que equilibram qualidade visual e funcionamento impecável.",
     name: "Vitor S. Santos",
-    position: "Engenheiro e Arquiteto de Software",
+    position: "Desenvolvedor Back-end",
   },
   {
     message:
