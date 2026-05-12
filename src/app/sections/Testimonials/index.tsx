@@ -10,7 +10,7 @@ const testimonials = [
   {
     message:
       "Dedicada e uma das melhores devs com quem já trabalhei. Vai além do 'apenas fazer funcionar', entendendo impactos e problemas. Recomendo muito e trabalharia novamente.",
-    name: "Diogo B. Moreno",
+    name: "Diogo Moreno",
     position: "Dev Full Stack | Ex-Tech Lead",
   },
   {
@@ -21,33 +21,45 @@ const testimonials = [
   },
   {
     message:
+      "A Lê é uma colega de front-end organizada, objetiva e focada, com atenção aos detalhes visuais e contextuais. Aberta a feedbacks, demonstra grande potencial de desenvolvimento pessoal e profissional.",
+    name: "Caio Ramos",
+    position: "Desenvolvedor Web Pleno",
+  },
+  {
+    message:
+      "Trabalhar com Letícia por quase 4 anos foi uma experiência extremamente positiva. Uma profissional muito competente, confiável e com grande capacidade de adaptação, além de ser uma pessoa excelente em equipe.",
+    name: "Ian Malavazi",
+    position: "Engenheiro de Software | Desenvolvedor Web",
+  },
+  {
+    message:
+      "Gostei muito de trabalhar com a Letícia. Ela se destaca pela excelente comunicação e pela criatividade na construção de interfaces, sempre entregando um front-end de alta qualidade e alinhado às melhores práticas.",
+    name: "Matheus Baptista",
+    position: "Engenheiro e Arquiteto de Software",
+  },
+  {
+    message:
+      "Trabalhei em vários projetos com a Letícia por cerca de três anos e essa parceria sempre funcionou muito bem. A considero muito dedicada e atenta aos detalhes, sempre aberta a trocar ideias e ouvir sugestões junto ao time.",
+    name: "Natália Mangili",
+    position: "Engenheira de Software | Desenvolvedora Back-end",
+  },
+  {
+    message:
+      "Letícia tem um olhar apurado para os detalhes que poucos desenvolvedores têm. Suas entregas são cuidadosas e comprometidas, sempre construindo interfaces que equilibram qualidade visual e funcionamento impecável.",
+    name: "Vitor Santos",
+    position: "Desenvolvedor Back-end",
+  },
+  {
+    message:
       "Acompanhei a trajetória profissional da Letícia e é admirável sua evolução como desenvolvedora. Ela me guiou no início e mudou minha forma de aprender, organizar e programar.",
     name: "Gabriel Campos",
     position: "Desenvolvedor Web e Estudante de TI",
   },
   {
     message:
-      "A Lê é uma colega de front-end organizada, objetiva e focada, com atenção aos detalhes visuais e contextuais. Aberta a feedbacks, demonstra grande potencial de desenvolvimento pessoal e profissional.",
-    name: "Caio M. Ramos",
-    position: "Desenvolvedor Web Pleno",
-  },
-  {
-    message:
       "Trabalhar com a Letícia é extremamente satisfatório, ela demonstra alto nível de dedicação, atenção minuciosa aos detalhes, grande empenho e notável capacidade de absorção e assimilação rápida de conteúdos.",
-    name: "Rafaela J. Estabile",
+    name: "Rafaela Estabile",
     position: "Desenvolvedora Full Stack",
-  },
-  {
-    message:
-      "Gostei muito de trabalhar com a Letícia. Ela se destaca pela excelente comunicação e pela criatividade na construção de interfaces modernas e responsivas, sempre entregando um front-end de alta qualidade e alinhado às melhores práticas.",
-    name: "Matheus P. Baptista",
-    position: "Engenheiro e Arquiteto de Software",
-  },
-  {
-    message:
-      "Letícia tem um olhar apurado para os detalhes que poucos desenvolvedores têm. Suas entregas são cuidadosas e comprometidas, sempre construindo interfaces que equilibram qualidade visual e funcionamento impecável.",
-    name: "Vitor S. Santos",
-    position: "Desenvolvedor Back-end",
   },
   {
     message:
