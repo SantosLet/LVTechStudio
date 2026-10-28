@@ -18,6 +18,8 @@ const icons = [
   { name: ".NET", icon: "devicon-dotnetcore-plain" },
   { name: "PHP", icon: "devicon-php-plain" },
   { name: "Laravel", icon: "devicon-laravel-plain" },
+  { name: "Node.js", icon: "devicon-nodejs-plain" },
+  { name: "Docker", icon: "devicon-docker-plain" },
 ];
 
 export default function SkillsIcons() {

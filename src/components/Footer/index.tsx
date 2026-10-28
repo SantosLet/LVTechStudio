@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="dot"></div>
           </div>
 
-          <p className="footer-position"> Desenvolvedora Front-end </p>
+          <p className="footer-position"> Desenvolvedora Full-stack </p>
         </div>
 
         <ul className="footer-menu">

@@ -42,33 +42,33 @@ const services = [
   {
     icon: "/icons/monitor_smartphone_icon_orange.svg",
     alt: "Ícone Responsividade",
-    title: "Landing Pages e Sites",
+    title: "Desenvolvimento Web",
     description:
-      "Interfaces responsivas a partir de layout, com estrutura consistente.",
+      "Interfaces responsivas, acessíveis e fiéis ao design.",
     className: "card border-b border-lv-white",
   },
   {
     icon: "/icons/database_icon_orange.svg",
     alt: "Ícone API",
-    title: "Consumo de API",
+    title: "APIs e Integrações",
     description:
-      "Integração com APIs REST e tratamento de dados para aplicações dinâmicas.",
+      "APIs REST com C#, .NET e SQL para conectar aplicações.",
     className: "card border-l-0 border-b sm:border-l border-lv-white",
   },
   {
     icon: "/icons/puzzle_icon_orange.svg",
     alt: "Ícone Interface",
-    title: "Interfaces de Sistemas",
+    title: "Sistemas e Automações",
     description:
-      "Telas para dashboards e sistemas, com componentização e organização.",
+      "Automações e engenharia de prompts para otimizar processos.",
     className: "card",
   },
   {
     icon: "/icons/globe_icon_orange.svg",
     alt: "Ícone Interface",
-    title: "Performance e SEO",
+    title: "Sustentação e Qualidade",
     description:
-      "Otimização de carregamento e ajustes para melhor desempenho e indexação.",
+      "Sustentação de legados com foco em qualidade e performance.",
     className: "card border-t sm:border-t-0 sm:border-l border-lv-white",
   },
 ];

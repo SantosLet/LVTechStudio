@@ -22,8 +22,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "LV Tech Studio",
-  description: "Portfólio Profissional da Letícia Gabrielle Videira dos Santos",
+  title: "Letícia Santos | Full-stack Developer",
+  description: "Desenvolvedora Full-stack especializada em aplicações web, interfaces modernas, APIs e soluções com Vue.js, TypeScript e Node.js.",
   icons: {
   icon: "/icons/lvtech_logo_orange.svg",
 }

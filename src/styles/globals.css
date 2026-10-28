@@ -321,6 +321,16 @@ section, .container {
             }
           }
     
+          .timeline-content-single-line {
+            @apply text-xsm lg:text-xs xl:text-sm 4xl:text-base;
+            container-type: inline-size;
+
+            p {
+              white-space: nowrap;
+              font-size: min(1em, 4.75cqw);
+            }
+          }
+
           &.period {
             @apply p-0;
     

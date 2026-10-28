@@ -65,14 +65,26 @@ const projects: Project[] = [
     link: "https://leasetechsaude.com.br/",
   },
   {
+    id: 6,
+    title: "Central de Comunicação",
+    feat: "Desafio técnico",
+    description:
+      "Aplicação desenvolvida como desafio técnico para simular uma central de comunicação. Permite buscar contatos, enviar mensagens simuladas, arquivar conversas e acompanhar indicadores de leitura. Construída com Vue.js, TypeScript e Pinia, com componentes reutilizáveis e interface responsiva.",
+    image: "/images/central_comunicacao_16x9.png",
+    imageAlt:
+      "Interface da Central de Comunicação com lista de contatos, histórico de mensagens e opções de busca e arquivamento de conversas.",
+    technologies: ["Vue.js", "TypeScript", "Pinia", "Vite", "SASS"],
+    link: "https://santoslet.github.io/BSCentralComunicacao/",
+  },
+  {
     id: 4,
     title: "Lasermix",
     feat: "Revelare",
     description:
       "Aplicação de e-commerce para a Lasermix Acrílicos, uma loja online especializada em produtos de acrílico personalizados, como troféus, medalhas e suportes. A interface responsiva e os componentes reutilizáveis facilitam a navegação e a compra, atendendo às necessidades de clientes que buscam qualidade e personalização.",
-    image: "/images/mockup_lasermix.png",
+    image: "/images/lasermix_16x9.png",
     imageAlt:
-      "Mockup do projeto Lasermix, mostrando a interface de uma loja virtual de produtos de acrílico, com destaque para itens personalizados e um design responsivo.",
+      "Captura do site Lasermix Acrílicos, com navegação por categorias e banner de troféus e placas em acrílico.",
     technologies: ["Nuvemshop", "Twig", "HTML", "CSS", "Javascript", "Filezilla"],
     link: "https://www.lasermixacrilicos.com.br/",
   },
@@ -82,9 +94,9 @@ const projects: Project[] = [
     feat: "Moovefy",
     description:
       "Sistema web do QuitaWeb, uma plataforma digital que simplifica a negociação e o pagamento de dívidas. O site oferece soluções flexíveis e personalizadas para que usuários possam organizar suas finanças, destacando a praticidade e a segurança na busca pela liberdade financeira.",
-    image: "/images/mockup_quitaweb.png",
+    image: "/images/quitaweb_16x9.png",
     imageAlt:
-      "Mockup do projeto QuitaWeb, mostrando a interface de um sistema web com foco em negociação de dívidas, com elementos visuais que transmitem organização e facilidade de uso.",
+      "Captura da tela de acesso do QuitaWeb, com formulário de login e opções de autenticação.",
     technologies: ["Vue", "Nuxt", "Typescript", "Tailwind", "API REST"],
     link: "https://app.quitaweb.com.br/",
   },

@@ -6,12 +6,18 @@ import SkillsIcons from "@/components/SkillsIcons";
 
 const timeline = [
   {
-    date: "Fev 2026 - Presente",
-    text: "Início da atuação profissional como desenvolvedora freelancer",
+    date: "Jul 2026 - Presente",
+    text: "Concilig - Desenvolvedora Back-end Jr",
+    singleLine: true,
+  },
+  {
+    date: "Jun 2026 - Abr 2027",
+    text: "Pós-graduação em Desenvolvimento Full Stack",
   },
   {
     date: "Jul 2025 - Jan 2026",
-    text: "Revelare - Desenvolvedora Front-end Júnior",
+    text: "Revelare - Desenvolvedora Front-end Jr",
+    singleLine: true,
   },
   {
     date: "Dez 2025",
@@ -19,7 +25,8 @@ const timeline = [
   },
   {
     date: "Jul 2023 - Mai 2025",
-    text: "Moovefy - Desenvolvedora Web Front-end Júnior",
+    text: "Moovefy - Desenvolvedora Web Front-end Jr",
+    singleLine: true,
   },
   {
     date: "Mai 2022 - Jun 2023",
@@ -65,7 +72,7 @@ export default function AboutMe() {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 92%", "end 72%"],
+    offset: ["start 92%", "end 92%"],
   });
 
   const smoothProgress = useSpring(scrollYProgress, {
@@ -90,6 +97,7 @@ export default function AboutMe() {
   const timeline5 = useRevealRange(smoothProgress, 0.60, 0.68, 22, 0.988);
   const timeline6 = useRevealRange(smoothProgress, 0.65, 0.73, 22, 0.988);
   const timeline7 = useRevealRange(smoothProgress, 0.70, 0.78, 22, 0.988);
+  const timeline8 = useRevealRange(smoothProgress, 0.75, 0.83, 22, 0.988);
 
   const marker1 = useTimelineMarkerRange(smoothProgress, 0.42, 0.47);
   const marker2 = useTimelineMarkerRange(smoothProgress, 0.47, 0.52);
@@ -98,6 +106,7 @@ export default function AboutMe() {
   const marker5 = useTimelineMarkerRange(smoothProgress, 0.62, 0.67);
   const marker6 = useTimelineMarkerRange(smoothProgress, 0.67, 0.72);
   const marker7 = useTimelineMarkerRange(smoothProgress, 0.72, 0.77);
+  const marker8 = useTimelineMarkerRange(smoothProgress, 0.77, 0.82);
 
   const timelineStyles = [
     timeline1,
@@ -107,6 +116,7 @@ export default function AboutMe() {
     timeline5,
     timeline6,
     timeline7,
+    timeline8,
   ];
 
   const markerStyles = [
@@ -117,6 +127,7 @@ export default function AboutMe() {
     marker5,
     marker6,
     marker7,
+    marker8,
   ];
 
   return (
@@ -154,12 +165,13 @@ export default function AboutMe() {
                   scale: paragraph1.scale,
                 }}
               >
-                Sou <strong>Desenvolvedora Front-end</strong> focada em{" "}
-                <strong>aplicações web</strong>, criando interfaces{" "}
-                <strong>modernas, responsivas e bem estruturadas</strong>.
-                Desde 2022, atuo em projetos organizados em <strong>sprints</strong>,
-                com foco em <strong>entregas contínuas</strong> e evolução constante
-                das soluções.
+                Sou <strong>Desenvolvedora Full Stack</strong> com{" "}
+                <strong>4 anos de experiência</strong> em software, trajetória
+                consolidada em <strong>front-end</strong> e atuação em expansão no{" "}
+                <strong>back-end</strong>. Transformo necessidades de negócio em{" "}
+                <strong>
+                  soluções funcionais, escaláveis e de fácil manutenção
+                </strong>.
               </motion.p>
 
               <motion.p
@@ -169,13 +181,14 @@ export default function AboutMe() {
                   scale: paragraph2.scale,
                 }}
               >
-                Trabalho na transformação de protótipos em aplicações reais,
-                mantendo fidelidade ao <strong>design</strong> e atenção à{" "}
-                <strong>performance</strong>, <strong>SEO</strong> e{" "}
-                <strong>experiência do usuário</strong>. Minha atuação é centrada em{" "}
-                <strong>Vue e TypeScript</strong>, além do desenvolvimento com{" "}
-                <strong>React e Next.js</strong>, sempre aplicando boas práticas de{" "}
-                <strong>organização</strong> e <strong>integração com APIs</strong>.
+                No front-end, desenvolvo{" "}
+                <strong>interfaces responsivas, acessíveis e performáticas</strong>{" "}
+                com <strong>Vue.js, Nuxt.js, React.js, Next.js</strong> e{" "}
+                <strong>TypeScript</strong>. Priorizo <strong>usabilidade</strong>,{" "}
+                <strong>fidelidade visual</strong> e <strong>qualidade do código</strong>,
+                com <strong>componentes reutilizáveis</strong> e integração com{" "}
+                <strong>APIs</strong>, transformando protótipos em aplicações
+                bem estruturadas.
               </motion.p>
 
               <motion.p
@@ -185,12 +198,12 @@ export default function AboutMe() {
                   scale: paragraph3.scale,
                 }}
               >
-                Ao longo dessa experiência, desenvolvi também uma base em back-end,
-                o que me permite compreender melhor a estrutura das aplicações e
-                contribuir com integrações mais eficientes. Busco construir interfaces
-                que equilibram <strong>estética, usabilidade e eficiência</strong>,
-                enquanto sigo evoluindo em <strong>UI Design</strong> e{" "}
-                <strong>desenvolvimento mobile</strong>.
+                No back-end, atuo com <strong>C#, .NET e SQL</strong>,{" "}
+                <strong>APIs REST</strong>, sustentação de legados e automações.
+                Aplico <strong>engenharia de prompts</strong> para otimizar processos
+                e aprimoro conhecimentos em arquitetura, boas práticas e testes
+                automatizados. Tenho perfil analítico, colaborativo e foco em
+                qualidade técnica e impacto para o negócio.
               </motion.p>
             </div>
           </div>
@@ -236,7 +249,11 @@ export default function AboutMe() {
                           }}
                         />
 
-                        <div className="timeline-content">
+                        <div
+                          className={`timeline-content${
+                            item.singleLine ? " timeline-content-single-line" : ""
+                          }`}
+                        >
                           <p>{item.text}</p>
                         </div>
                       </motion.li>

@@ -69,9 +69,9 @@ const testimonials = [
   },
   {
     message:
-      "A Letícia foi essencial na construção da interface do meu projeto. Com clareza e senso de organização, ela me mostrou como estruturar um design limpo e funcional, elevando muito meu nível.",
-    name: "João Paulo do Amaral",
-    position: "Analista Contábil",
+      "Mesmo em equipes diferentes, pude perceber seu conhecimento em front-end e o cuidado com o código. Aprendi bastante com sua padronização, e nossa parceria tornava o ambiente de trabalho mais leve.",
+    name: "Gabriel Domeniconi",
+    position: "Desenvolvedor Full Stack",
   },
 ];
 
