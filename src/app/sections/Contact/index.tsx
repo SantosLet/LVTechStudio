@@ -2,7 +2,7 @@
 
 import Button from "@/components/Button";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
 function useReveal(
@@ -19,30 +19,6 @@ function useReveal(
 
 export default function Contact() {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const cvNoticeTimeout = useRef<number | null>(null);
-  const [showCvNotice, setShowCvNotice] = useState(false);
-
-  useEffect(
-    () => () => {
-      if (cvNoticeTimeout.current !== null) {
-        window.clearTimeout(cvNoticeTimeout.current);
-      }
-    },
-    [],
-  );
-
-  function notifyCvUnavailable() {
-    setShowCvNotice(true);
-
-    if (cvNoticeTimeout.current !== null) {
-      window.clearTimeout(cvNoticeTimeout.current);
-    }
-
-    cvNoticeTimeout.current = window.setTimeout(() => {
-      setShowCvNotice(false);
-      cvNoticeTimeout.current = null;
-    }, 4000);
-  }
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -114,9 +90,8 @@ export default function Contact() {
 
               <Button
                 variant="secondary"
-                onClick={notifyCvUnavailable}
-                aria-disabled
-                className="cursor-pointer"
+                disabled
+                title="Currículo indisponível no momento"
               >
                 Baixar CV
 
@@ -289,19 +264,6 @@ export default function Contact() {
           </motion.a>
         </div>
       </div>
-
-      <motion.p
-        id="cv-unavailable-notice"
-        role="status"
-        aria-live="polite"
-        aria-atomic="true"
-        className="pointer-events-none fixed bottom-6 left-1/2 z-50 w-max max-w-[calc(100vw_-_2rem)] -translate-x-1/2 rounded-lg border border-lv-main/50 bg-lv-black px-4 py-3 text-center text-lv-white shadow-lg"
-        initial={false}
-        animate={{ opacity: showCvNotice ? 1 : 0, y: showCvNotice ? 0 : 12 }}
-        transition={{ duration: 0.2 }}
-      >
-        {showCvNotice ? "Currículo indisponível no momento" : ""}
-      </motion.p>
     </section>
   );
 }

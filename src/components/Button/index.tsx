@@ -5,7 +5,8 @@ type ButtonProps = {
   onClick?: () => void;
   className?: string;
   download?: boolean;
-  "aria-disabled"?: React.AriaAttributes["aria-disabled"];
+  disabled?: boolean;
+  title?: string;
 };
 
 export default function Button({
@@ -15,17 +16,18 @@ export default function Button({
   onClick,
   className = "",
   download = false,
-  "aria-disabled": ariaDisabled,
+  disabled = false,
+  title,
 }: ButtonProps) {
   const styles = `lvtech-button lvtech-button--${variant} ${className}`;
 
-  if (href) {
+  if (href && !disabled) {
     return (
       <a
         href={href}
         className={styles}
         download={download || undefined}
-        aria-disabled={ariaDisabled}
+        title={title}
       >
         {children}
       </a>
@@ -37,7 +39,8 @@ export default function Button({
       type="button"
       onClick={onClick}
       className={styles}
-      aria-disabled={ariaDisabled}
+      disabled={disabled}
+      title={title}
     >
       {children}
     </button>
